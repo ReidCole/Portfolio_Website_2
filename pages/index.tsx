@@ -1,62 +1,42 @@
 /** @jsxImportSource theme-ui */
 
 import type { NextPage } from "next";
+import Head from "next/head";
 import { useColorMode, useThemeUI } from "theme-ui";
+import Header from "../components/Header";
+import ScrollViewContainer from "../components/ScrollViewContainer";
 
 const Home: NextPage = () => {
   const [colorMode, setColorMode] = useColorMode();
 
   return (
-    <div>
-      <h1>Hello World</h1>
-      <div>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum cumque ratione a quas
-          praesentium temporibus earum, sunt, architecto in laborum quae odio dolorem molestiae vel
-          suscipit officiis quisquam tempore culpa, eveniet tempora quia reprehenderit placeat nemo?
-          Alias provident veritatis quia?
+    <>
+      <Head>
+        <title>Reid Cole - Web Developer</title>
+      </Head>
+
+      <Header />
+
+      <ScrollViewContainer className="flex flex-col gap-2 mt-4">
+        <h1 sx={{ fontFamily: "code", color: "code_element" }} className="text-center text-6xl">
+          <span sx={{ color: "code_bracket" }}>&lt;</span>reidcole
+          <span sx={{ color: "code_bracket" }}>/&gt;</span>
+          <span sx={{ color: "code_caret" }} className="animate-blink">
+            |
+          </span>
+        </h1>
+        <p sx={{ fontFamily: "code" }} className="text-center text-xl">
+          Front-End/Full-Stack Web Developer
         </p>
-        <ul>
-          <li>stuff</li>
-          <li className="text-green-400 mt-4">things</li>
-        </ul>
-      </div>
-      <div className="flex flex-row gap-3 m-4">
-        <button
-          onClick={() => {
-            setColorMode("apple");
-          }}
-          sx={{
-            backgroundColor: "primary",
-          }}
-          className="p-4"
-        >
-          A
-        </button>
-        <button
-          onClick={() => {
-            setColorMode("banana");
-          }}
-          sx={{
-            backgroundColor: "primary",
-          }}
-          className="p-4"
-        >
-          B
-        </button>
-        <button
-          onClick={() => {
-            setColorMode("carrot");
-          }}
-          sx={{
-            backgroundColor: "primary",
-          }}
-          className="p-4"
-        >
-          C
-        </button>
-      </div>
-    </div>
+      </ScrollViewContainer>
+
+      <p className="mb-96">spacer</p>
+      <p className="mb-96">spacer</p>
+      <p className="mb-96">spacer</p>
+      <p className="mb-96">spacer</p>
+      <p className="mb-96">spacer</p>
+      <p className="mb-96">spacer</p>
+    </>
   );
 };
 

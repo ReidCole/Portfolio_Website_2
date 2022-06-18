@@ -5,26 +5,18 @@ export const theme: Theme = {
     initialColorModeName: "apple",
   },
   fonts: {
-    body: "system-ui, sans-serif",
-    heading: '"Avenir Next", sans-serif',
-    monospace: "Menlo, monospace",
+    code: "monospace",
+    body: "Arial",
   },
   colors: {
-    background: "black",
-    text: "lime",
-    primary: "red",
-    modes: {
-      banana: {
-        background: "rgb(0, 0, 40)",
-        text: "cyan",
-        primary: "purple",
-      },
-      carrot: {
-        text: "black",
-        background: "orange",
-        primary: "red",
-      },
-    },
+    background: "#1e1e1e",
+    background2: "#252526",
+    text: "#d4d4d4",
+    subtext: "#808080",
+    code_element: "#569cd6",
+    code_bracket: "#808080",
+    code_caret: "#aeafad",
+    modes: {},
   },
   breakpoints: ["400px", "600px", "800px"],
 };
