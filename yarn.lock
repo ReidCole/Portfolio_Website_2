@@ -65,11 +65,6 @@
     "@babel/helper-validator-identifier" "^7.16.7"
     to-fast-properties "^2.0.0"
 
-"@deadcoder0904/react-typical@^0.1.2":
-  version "0.1.2"
-  resolved "https://registry.yarnpkg.com/@deadcoder0904/react-typical/-/react-typical-0.1.2.tgz#a2eabfe1abdd92ea893af9838fdc73d853c2181d"
-  integrity sha512-6lQcCAL3yjb+lbRnVIRMFRkc8Z8Kub9enG3kNRmZdozRdc9eBWGKGa6RT5hEontc14ASPr9qSeJEV3I7++YvMA==
-
 "@emotion/babel-plugin@^11.7.1":
   version "11.9.2"
   resolved "https://registry.npmjs.org/@emotion/babel-plugin/-/babel-plugin-11.9.2.tgz"

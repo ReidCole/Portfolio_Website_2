@@ -9,7 +9,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@deadcoder0904/react-typical": "^0.1.2",
     "@emotion/react": "^11.9.3",
     "@mdx-js/react": "1.6.22",
     "@types/react-transition-group": "^4.4.4",

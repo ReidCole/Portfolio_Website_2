@@ -5,7 +5,7 @@ import Head from "next/head";
 import { useColorMode, useThemeUI } from "theme-ui";
 import Header from "../components/Header";
 import ScrollViewContainer from "../components/ScrollViewContainer";
-import { ReactTypical } from "@deadcoder0904/react-typical";
+import ReactTyped from "react-typed";
 
 const Home: NextPage = () => {
   const [colorMode, setColorMode] = useColorMode();
@@ -23,14 +23,15 @@ const Home: NextPage = () => {
           <span sx={{ color: "code_bracket" }}>&lt;</span>reidcole
           <span sx={{ color: "code_bracket" }}>/&gt;</span>
         </h1>
-        <div className="flex flex-row justify-center text-xl text-center">
-          <ReactTypical
+        <div className="flex flex-row justify-center items-center text-xl text-center gap-0.5">
+          <ReactTyped
             sx={{ fontFamily: "code" }}
-            steps={["Front-End/Full-Stack Web Developer", "stuff"]}
-            wrapper="p"
-            loop={1}
+            strings={["Front-End/Full-Stack Web Developer"]}
+            loop={false}
+            showCursor={false}
+            typeSpeed={40}
           />
-          <span sx={{ color: "code_caret" }} className="animate-blink">
+          <span sx={{ color: "code_caret" }} className="animate-blink font-bold">
             |
           </span>
         </div>
