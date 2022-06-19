@@ -16,24 +16,19 @@ const Home: NextPage = () => {
         <title>Reid Cole - Web Developer</title>
       </Head>
 
-      <Header />
-
-      <ScrollViewContainer className="flex flex-col gap-2 mt-4">
+      <ScrollViewContainer className="flex flex-col gap-2 mt-6">
         <h1 sx={{ fontFamily: "code", color: "code_element" }} className="text-center text-6xl">
           <span sx={{ color: "code_bracket" }}>&lt;</span>reidcole
           <span sx={{ color: "code_bracket" }}>/&gt;</span>
         </h1>
-        <div className="flex flex-row justify-center items-center text-xl text-center gap-0.5">
+        <div className="text-xl text-center gap-1" sx={{ fontFamily: "code" }}>
+          F
           <ReactTyped
-            sx={{ fontFamily: "code" }}
-            strings={["Front-End/Full-Stack Web Developer"]}
+            strings={["ull-Stack Web Developer"]}
             loop={false}
             showCursor={false}
-            typeSpeed={40}
+            typeSpeed={50}
           />
-          <span sx={{ color: "code_caret" }} className="animate-blink font-bold">
-            |
-          </span>
         </div>
       </ScrollViewContainer>
 
