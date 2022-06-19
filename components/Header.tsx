@@ -1,16 +1,19 @@
 /** @jsxImportSource theme-ui */
 import { useRouter } from "next/router";
+import { useState } from "react";
 import { useColorMode } from "theme-ui";
 import useDropdownState from "../hooks/useDropdownState";
 import Dropdown from "./Dropdown";
 import HeaderButton from "./HeaderButton";
 import NavLink from "./NavLink";
+import Sidebar from "./Sidebar";
 
 const Header = () => {
   const [colorMode, setColorMode] = useColorMode();
   const router = useRouter();
   const fileName = (router.pathname === "/" ? "index" : router.pathname.substring(1)) + ".tsx";
   const [themeDropdownState, openThemeDropdown] = useDropdownState();
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   function onSelectTheme(theme: string) {
     setColorMode(theme);
@@ -24,7 +27,7 @@ const Header = () => {
         }}
         className="fixed w-full top-0 left-0 z-10 shadow-lg h-20"
       >
-        <div className="flex flex-row justify-between h-12">
+        <div className="hidden md:flex flex-row justify-between h-12">
           <nav
             sx={{
               backgroundColor: "background",
@@ -63,6 +66,7 @@ const Header = () => {
               onClick={() => openThemeDropdown()}
             />
             <Dropdown
+              className="top-12 right-4"
               state={themeDropdownState}
               options={[
                 { text: "Dark (Default)", onClick: () => onSelectTheme("dark") },
@@ -71,6 +75,13 @@ const Header = () => {
               ]}
             />
           </div>
+        </div>
+
+        <div className="flex md:hidden flex-row justify-between h-12">
+          <button title="Open Sidebar" onClick={() => setIsSidebarOpen(true)}>
+            <i className="flex bi-list text-3xl px-4 items-center justify-center h-full" />
+          </button>
+          <Sidebar isOpen={isSidebarOpen} close={() => setIsSidebarOpen(false)} />
         </div>
 
         <div

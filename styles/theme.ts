@@ -37,7 +37,7 @@ export const theme: Theme = {
       solarizedDark: {
         background: "#002b36",
         background2: "#004052",
-        text: "#cdcdcd",
+        text: "#d6dbdb",
         subtext: "#a3acae",
         code_element: "#859900",
         code_bracket: "#586e75",

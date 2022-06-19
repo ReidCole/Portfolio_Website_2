@@ -5,6 +5,7 @@ import { DropdownState } from "../hooks/useDropdownState";
 type Props = {
   state: DropdownState;
   options: DropdownOption[];
+  className?: string;
 };
 
 type DropdownOption = {
@@ -12,7 +13,7 @@ type DropdownOption = {
   onClick: () => void;
 };
 
-const Dropdown: React.FC<Props> = ({ state, options }) => {
+const Dropdown: React.FC<Props> = ({ state, options, className }) => {
   const firstItem = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
@@ -27,8 +28,9 @@ const Dropdown: React.FC<Props> = ({ state, options }) => {
         backgroundColor: "code_dropdown_bg",
       }}
       className={
-        "py-1 rounded-lg absolute flex flex-col top-10 right-4 shadow-lg " +
-        (state.isOpen ? "" : "hidden")
+        "py-1 rounded-lg absolute flex flex-col shadow-lg " +
+        (state.isOpen ? "" : "hidden ") +
+        className
       }
     >
       {options.map((option, index) => (

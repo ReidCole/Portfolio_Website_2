@@ -30,7 +30,7 @@ const ScrollViewContainer: React.FC<Props> = ({ children, className = "" }) => {
   return (
     <div
       className={
-        "transition-all duration-700 " + (isVisible ? "opacity-100 " : "opacity-0 ") + className
+        "transition-opacity duration-700 " + (isVisible ? "opacity-100 " : "opacity-0 ") + className
       }
       ref={ref}
     >
