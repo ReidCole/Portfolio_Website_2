@@ -2,14 +2,11 @@
 
 import type { NextPage } from "next";
 import Head from "next/head";
-import { useColorMode, useThemeUI } from "theme-ui";
 import Header from "../components/Header";
 import ScrollViewContainer from "../components/ScrollViewContainer";
 import ReactTyped from "react-typed";
 
 const Home: NextPage = () => {
-  const [colorMode, setColorMode] = useColorMode();
-
   return (
     <>
       <Head>
@@ -31,8 +28,6 @@ const Home: NextPage = () => {
           />
         </div>
       </ScrollViewContainer>
-
-      <div className="flex flex-row"></div>
 
       <p className="mb-96">spacer</p>
       <p className="mb-96">spacer</p>

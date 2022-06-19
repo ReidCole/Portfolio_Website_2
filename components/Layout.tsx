@@ -1,3 +1,4 @@
+/** @jsxImportSource theme-ui */
 import Header from "./Header";
 
 type Props = {
