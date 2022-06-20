@@ -7,6 +7,7 @@ import Dropdown from "./Dropdown";
 import HeaderButton from "./HeaderButton";
 import NavLink from "./NavLink";
 import Sidebar from "./Sidebar";
+import SidebarLink from "./SidebarLink";
 
 const Header = () => {
   const [colorMode, setColorMode] = useColorMode();
@@ -81,7 +82,17 @@ const Header = () => {
           <button title="Open Sidebar" onClick={() => setIsSidebarOpen(true)}>
             <i className="flex bi-list text-3xl px-4 items-center justify-center h-full" />
           </button>
-          <Sidebar isOpen={isSidebarOpen} close={() => setIsSidebarOpen(false)} />
+          <Sidebar isOpen={isSidebarOpen} close={() => setIsSidebarOpen(false)}>
+            <SidebarLink href="/" iconClass="house">
+              Home
+            </SidebarLink>
+            <SidebarLink href="/about" iconClass="person">
+              About
+            </SidebarLink>
+            <SidebarLink href="/projects" iconClass="view-list">
+              Projects
+            </SidebarLink>
+          </Sidebar>
         </div>
 
         <div

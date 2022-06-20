@@ -5,7 +5,7 @@ export const theme: Theme = {
     initialColorModeName: "dark",
   },
   fonts: {
-    code: "monospace",
+    code: "Consolas, monospace",
     body: "Arial",
   },
   colors: {

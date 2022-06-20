@@ -18,7 +18,6 @@ const Dropdown: React.FC<Props> = ({ state, options, className }) => {
 
   useEffect(() => {
     if (firstItem.current === null || !state.isOpen) return;
-    console.log("open effect");
     firstItem.current.focus();
   }, [state.isOpen]);
 
@@ -28,7 +27,7 @@ const Dropdown: React.FC<Props> = ({ state, options, className }) => {
         backgroundColor: "code_dropdown_bg",
       }}
       className={
-        "py-1 rounded-lg absolute flex flex-col shadow-lg " +
+        "py-1 rounded-lg absolute flex flex-col shadow-lg overflow-hidden w-max " +
         (state.isOpen ? "" : "hidden ") +
         className
       }
