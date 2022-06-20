@@ -13,6 +13,7 @@ type Props = {
 
 const Sidebar: React.FC<Props> = ({ isOpen, close, children }) => {
   const buttonsParent = useRef<HTMLDivElement>(null);
+  const buttonsParent2 = useRef<HTMLDivElement>(null);
   const closeButton = useRef<HTMLButtonElement>(null);
   const [themeDropdownState, openThemeDropdown] = useDropdownState();
   const [colorMode, setColorMode] = useColorMode();
@@ -32,15 +33,19 @@ const Sidebar: React.FC<Props> = ({ isOpen, close, children }) => {
   }
 
   useEffect(() => {
-    if (buttonsParent.current === null) return;
+    if (buttonsParent.current === null || buttonsParent2.current === null) return;
 
     function setChildrenTabIndices(tabIndex: number) {
-      if (buttonsParent.current === null) return;
-      const childButtons = buttonsParent.current.children;
+      if (buttonsParent.current === null || buttonsParent2.current === null) return;
+      const parentElements = [buttonsParent.current, buttonsParent2.current];
 
-      for (let i = 0; i < childButtons.length; i++) {
-        const element = childButtons[i] as HTMLElement;
-        element.tabIndex = tabIndex;
+      for (let i = 0; i < parentElements.length; i++) {
+        const parentElement = parentElements[i];
+        const childElements = parentElement.children;
+        for (let j = 0; j < childElements.length; j++) {
+          const element = childElements[j] as HTMLElement;
+          element.tabIndex = tabIndex;
+        }
       }
     }
 
@@ -122,7 +127,7 @@ const Sidebar: React.FC<Props> = ({ isOpen, close, children }) => {
           {children}
         </div>
 
-        <div className="flex flex-row p-2 justify-between">
+        <div ref={buttonsParent2} className="flex flex-row p-2 justify-between">
           <a
             href="mailto:reid-cole@outlook.com"
             target="_blank"

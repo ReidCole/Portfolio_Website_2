@@ -1,0 +1,2 @@
+- organize large components by making parts of them into their own components
+- take screenshots of showcase sites in a consistent portrait screen size

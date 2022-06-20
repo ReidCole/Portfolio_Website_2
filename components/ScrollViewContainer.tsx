@@ -13,14 +13,14 @@ const ScrollViewContainer: React.FC<Props> = ({ children, className = "" }) => {
 
   useEffect(() => {
     if (ref.current === null || isVisible) return;
-    var rect = ref.current.getBoundingClientRect();
-    var elemTop = rect.top;
-    var elemBottom = rect.bottom;
+    const rect = ref.current.getBoundingClientRect();
+    const elemTop = rect.top;
+    const elemBottom = rect.bottom;
 
     // Only completely visible elements return true:
-    var visible = elemTop >= 0 && elemBottom <= window.innerHeight;
+    // var visible = elemTop >= 0 && elemBottom <= window.innerHeight;
     // Partially visible elements return true:
-    // var visible = elemTop < window.innerHeight && elemBottom >= 0;
+    const visible = elemTop < window.innerHeight && elemBottom >= 0;
 
     if (visible) {
       setIsVisible(true);
