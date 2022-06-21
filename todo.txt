@@ -1,2 +1,5 @@
 - organize large components by making parts of them into their own components
 - take screenshots of showcase sites in a consistent portrait screen size
+- make colors for other themes (if you use them)
+  - code_component 
+  - code_string

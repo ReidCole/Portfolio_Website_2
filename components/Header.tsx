@@ -32,8 +32,9 @@ const Header = () => {
           <nav
             sx={{
               backgroundColor: "background",
+              gap: "1px",
             }}
-            className="h-full text-lg flex flex-row items-center gap-0.5 w-max"
+            className="h-full text-lg flex flex-row items-center w-max"
           >
             <NavLink href="/">Home</NavLink>
             <NavLink href="/about">About</NavLink>

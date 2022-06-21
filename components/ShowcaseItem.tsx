@@ -1,40 +1,82 @@
 /** @jsxImportSource theme-ui */
 
 import Image, { StaticImageData } from "next/image";
+import { useEffect, useState } from "react";
+import { useColorMode } from "theme-ui";
 import ScrollViewContainer from "./ScrollViewContainer";
 
 type Props = {
   name: string;
   imageSrc: string | StaticImageData;
   href: string;
+  description: string;
+  packages: ShowcasePackage[];
 };
 
-const ShowcaseItem: React.FC<Props> = ({ name, imageSrc, href }) => {
+type ShowcasePackage = {
+  name: string;
+  logoSrc: string | StaticImageData;
+  invertOnLightTheme?: boolean;
+};
+
+const ShowcaseItem: React.FC<Props> = ({ name, imageSrc, href, description, packages }) => {
+  const [colorMode, setColorMode] = useColorMode();
+  const [themeType, setThemeType] = useState<"dark" | "light">("dark");
+
+  useEffect(() => {
+    if (colorMode.toLowerCase().includes("light")) {
+      setThemeType("light");
+    } else {
+      setThemeType("dark");
+    }
+  }, [colorMode]);
+
   return (
     <ScrollViewContainer>
       <a href={href} rel="noopener noreferrer" target="_blank" title={`Visit ${name} Website`}>
         <div
           sx={{
             backgroundColor: "background2",
+            borderColor: "code_button_hover",
+            ":hover": {
+              borderColor: "code_element",
+            },
           }}
-          className="px-3 py-2 rounded-xl shadow-lg hover:scale-105 transition-transform group"
+          className="p-3 shadow-lg group border-2"
         >
-          <h3 className="text-lg mb-1">{name}</h3>
-          <div className="flex flex-row gap-4">
-            <div className="rounded-xl flex flex-shrink-0 overflow-hidden w-max">
+          <h3 className="text-xl mb-1">{name}</h3>
+          <div className="flex flex-col text-lg">
+            <div className="flex flex-shrink-0 mb-2">
               <Image
                 src={imageSrc}
                 alt="simple notes website"
-                className="brightness-75 group-hover:brightness-100 transition-all"
+                className={
+                  "group-hover:brightness-100 " +
+                  (themeType === "dark" ? "brightness-75" : "brightness-100")
+                }
                 priority
-                height={200}
-                width={150}
+                width={1920}
+                height={1080}
               />
             </div>
-            <p className="text-lg">
-              Info: Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur enim
-              deserunt asperiores. Cum, facere atque? Facere tempore ipsum ipsa. Placeat.
-            </p>
+
+            <p className="mb-2">Made with:</p>
+            <div className="flex flex-col gap-3">
+              {packages.map((p, index) => (
+                <div key={index} className="flex flex-row items-center gap-2">
+                  <Image
+                    src={p.logoSrc}
+                    alt={p.name + " logo"}
+                    width={40}
+                    height={40}
+                    className={
+                      p.invertOnLightTheme === true && themeType === "light" ? "invert" : ""
+                    }
+                  />
+                  <p>{p.name}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </a>

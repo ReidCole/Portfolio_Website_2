@@ -14,6 +14,8 @@ export const theme: Theme = {
     text: "#d4d4d4",
     subtext: "#a9a9a9",
     code_element: "#569cd6",
+    // code_component: "#4ec9b0",
+    // code_string: "#ce9178",
     code_bracket: "#808080",
     code_caret: "#aeafad",
     code_off_tab: "#2d2d2d",

@@ -18,6 +18,9 @@ module.exports = {
           "50%, 100%": { opacity: "0%" },
         },
       },
+      screens: {
+        "hover-hover": { raw: "(hover: hover)" },
+      },
     },
   },
   plugins: [],

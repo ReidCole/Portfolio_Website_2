@@ -15,6 +15,9 @@ const NavLink: React.FC<Props> = ({ href, children }) => {
       <a
         sx={{
           backgroundColor: router.pathname === href ? "background" : "code_off_tab",
+          ":hover": {
+            backgroundColor: "background",
+          },
         }}
         className="px-4 h-full flex flex-row items-center"
       >
