@@ -19,7 +19,7 @@ type ShowcasePackage = {
   invertOnLightTheme?: boolean;
 };
 
-const ShowcaseItem: React.FC<Props> = ({ name, imageSrc, href, description, packages }) => {
+const ProjectItem: React.FC<Props> = ({ name, imageSrc, href, description, packages }) => {
   const [colorMode, setColorMode] = useColorMode();
   const [themeType, setThemeType] = useState<"dark" | "light">("dark");
 
@@ -84,4 +84,4 @@ const ShowcaseItem: React.FC<Props> = ({ name, imageSrc, href, description, pack
   );
 };
 
-export default ShowcaseItem;
+export default ProjectItem;

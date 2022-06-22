@@ -1,5 +1,6 @@
 import { NextPage } from "next";
 import Head from "next/head";
+import ProjectsSection from "../components/sections/ProjectsSection";
 
 const Projects: NextPage = () => {
   return (
@@ -8,11 +9,7 @@ const Projects: NextPage = () => {
         <title>Reid Cole - About Me</title>
       </Head>
 
-      <h1>Project Name</h1>
-      <p>Unique Features</p>
-
-      <h1>Project Name</h1>
-      <p>Unique Features</p>
+      <ProjectsSection />
     </div>
   );
 };
