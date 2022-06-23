@@ -1,6 +1,7 @@
 import thumbnail_sn from "../../public/img/simplenotes.jpg";
 import thumbnail_mlm from "../../public/img/movielistmaker.jpg";
 import thumbnail_rd from "../../public/img/reidsdrinks.jpg";
+import thumbnail_old from "../../public/img/oldportfolio.jpg";
 import logo_next from "../../public/img/logos/nextjs_logo.svg";
 import logo_redux from "../../public/img/logos/redux_logo.svg";
 import logo_tailwind from "../../public/img/logos/tailwindcss_logo.svg";
@@ -25,7 +26,6 @@ const ProjectsSection = () => {
             name="Simple Notes"
             imageSrc={thumbnail_sn}
             href="https://simplenotes-rc.netlify.app"
-            description="A simple app where you can write and save notes to the cloud."
             packages={[
               {
                 name: "Next JS",
@@ -46,7 +46,6 @@ const ProjectsSection = () => {
             name="Movie List Maker"
             imageSrc={thumbnail_mlm}
             href="https://client.movielistmakerserver.xyz"
-            description=""
             packages={[
               {
                 name: "Express JS",
@@ -67,7 +66,6 @@ const ProjectsSection = () => {
             name="Reid's Drinks"
             imageSrc={thumbnail_rd}
             href="https://reidsdrinks.netlify.app"
-            description=""
             packages={[
               {
                 name: "Next JS",
@@ -81,6 +79,26 @@ const ProjectsSection = () => {
               {
                 name: "Cypress",
                 logoSrc: logo_cypress,
+              },
+            ]}
+          />
+          <ProjectItem
+            name="Old Portfolio Site"
+            imageSrc={thumbnail_old}
+            href="https://old.reidcole.me"
+            packages={[
+              {
+                name: "Next JS",
+                logoSrc: logo_next,
+                invertOnLightTheme: true,
+              },
+              {
+                name: "TypeScript",
+                logoSrc: logo_ts,
+              },
+              {
+                name: "CSS",
+                logoSrc: logo_css,
               },
             ]}
           />

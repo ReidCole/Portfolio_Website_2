@@ -8,6 +8,7 @@ import HeaderButton from "./HeaderButton";
 import NavLink from "./NavLink";
 import Sidebar from "./Sidebar";
 import SidebarLink from "./SidebarLink";
+import ThemeDropdown from "./ThemeDropdown";
 
 const Header = () => {
   const [colorMode, setColorMode] = useColorMode();
@@ -32,14 +33,19 @@ const Header = () => {
         <div className="hidden md:flex flex-row justify-between h-12">
           <nav
             sx={{
-              backgroundColor: "background",
               gap: "1px",
             }}
             className="h-full text-lg flex flex-row items-center w-max"
           >
-            <NavLink href="/">Home</NavLink>
-            <NavLink href="/about">About</NavLink>
-            <NavLink href="/projects">Projects</NavLink>
+            <NavLink href="/" iconClass="house">
+              Home
+            </NavLink>
+            <NavLink href="/about" iconClass="person">
+              About
+            </NavLink>
+            <NavLink href="/projects" iconClass="view-list">
+              Projects
+            </NavLink>
           </nav>
           <div className="flex flex-row h-full items-center px-2 gap-2">
             <HeaderButton
@@ -68,14 +74,10 @@ const Header = () => {
               title="Change Theme"
               onClick={() => openThemeDropdown()}
             />
-            <Dropdown
+            <ThemeDropdown
+              dropdownState={themeDropdownState}
+              onSelectTheme={onSelectTheme}
               className="top-12 right-4"
-              state={themeDropdownState}
-              options={[
-                { text: "Dark (Default)", onClick: () => onSelectTheme("dark") },
-                { text: "Light", onClick: () => onSelectTheme("light") },
-                { text: "Solarized Dark", onClick: () => onSelectTheme("solarizedDark") },
-              ]}
             />
           </div>
         </div>

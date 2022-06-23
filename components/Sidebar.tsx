@@ -1,4 +1,5 @@
 /** @jsxImportSource theme-ui */
+import ThemeDropdown from "./ThemeDropdown";
 import { useEffect, useRef, useState } from "react";
 import { useColorMode } from "theme-ui";
 import useDropdownState from "../hooks/useDropdownState";
@@ -159,14 +160,10 @@ const Sidebar: React.FC<Props> = ({ isOpen, close, children }) => {
             <i className="bi-moon-stars-fill flex text-2xl p-2" />
           </button>
 
-          <Dropdown
+          <ThemeDropdown
+            dropdownState={themeDropdownState}
+            onSelectTheme={onSelectTheme}
             className="bottom-14 left-48 z-40"
-            state={themeDropdownState}
-            options={[
-              { text: "Dark (Default)", onClick: () => onSelectTheme("dark") },
-              { text: "Light", onClick: () => onSelectTheme("light") },
-              { text: "Solarized Dark", onClick: () => onSelectTheme("solarizedDark") },
-            ]}
           />
         </div>
       </div>

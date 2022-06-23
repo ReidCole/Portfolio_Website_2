@@ -9,7 +9,6 @@ type Props = {
   name: string;
   imageSrc: string | StaticImageData;
   href: string;
-  description: string;
   packages: ShowcasePackage[];
 };
 
@@ -19,7 +18,7 @@ type ShowcasePackage = {
   invertOnLightTheme?: boolean;
 };
 
-const ProjectItem: React.FC<Props> = ({ name, imageSrc, href, description, packages }) => {
+const ProjectItem: React.FC<Props> = ({ name, imageSrc, href, packages }) => {
   const [colorMode, setColorMode] = useColorMode();
   const [themeType, setThemeType] = useState<"dark" | "light">("dark");
 
@@ -33,7 +32,7 @@ const ProjectItem: React.FC<Props> = ({ name, imageSrc, href, description, packa
 
   return (
     <ScrollViewContainer>
-      <a href={href} rel="noopener noreferrer" target="_blank" title={`Visit ${name} Website`}>
+      <a href={href} rel="noopener noreferrer" target="_blank" title={`Visit ${name}`}>
         <div
           sx={{
             backgroundColor: "background2",

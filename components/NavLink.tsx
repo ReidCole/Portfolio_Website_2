@@ -5,9 +5,10 @@ import { useRouter } from "next/router";
 type Props = {
   href: string;
   children: React.ReactNode;
+  iconClass: string;
 };
 
-const NavLink: React.FC<Props> = ({ href, children }) => {
+const NavLink: React.FC<Props> = ({ href, children, iconClass }) => {
   const router = useRouter();
 
   return (
@@ -19,9 +20,9 @@ const NavLink: React.FC<Props> = ({ href, children }) => {
             backgroundColor: "background",
           },
         }}
-        className="px-4 h-full flex flex-row items-center"
+        className="px-4 h-full flex flex-row gap-2 items-center"
       >
-        {children}
+        <i className={`bi-${iconClass} flex text-xl`} /> {children}
       </a>
     </Link>
   );
