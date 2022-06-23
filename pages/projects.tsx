@@ -1,6 +1,6 @@
 import { NextPage } from "next";
 import Head from "next/head";
-import ProjectsSection from "../components/sections/ProjectsSection";
+import ProjectsSection from "../components/projects/ProjectsSection";
 
 const Projects: NextPage = () => {
   return (

@@ -1,3 +1,5 @@
 - organize large components by making parts of them into their own components
 - make content container wider at larger screen sizes so you can put wider stuff in them
   - make features in showcase nice and wide on wider screen sizes
+- add colors for other themes
+  - code_component

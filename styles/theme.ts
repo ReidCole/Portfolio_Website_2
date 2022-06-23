@@ -6,7 +6,7 @@ export const theme: Theme = {
   },
   fonts: {
     code: "Consolas, monospace",
-    body: "Arial",
+    body: "Arial, sans-serif",
   },
   colors: {
     background: "#1e1e1e",
@@ -14,7 +14,7 @@ export const theme: Theme = {
     text: "#d4d4d4",
     subtext: "#a9a9a9",
     code_element: "#569cd6",
-    // code_component: "#4ec9b0",
+    code_component: "#4ec9b0",
     // code_string: "#ce9178",
     code_bracket: "#808080",
     code_caret: "#aeafad",
@@ -29,6 +29,7 @@ export const theme: Theme = {
         text: "#000000",
         subtext: "#818181",
         code_element: "#800000",
+        code_component: "#267f99",
         code_bracket: "#800000",
         code_caret: "#000000",
         code_off_tab: "#ececec",
@@ -42,6 +43,7 @@ export const theme: Theme = {
         text: "#d6dbdb",
         subtext: "#a3acae",
         code_element: "#859900",
+        code_component: "#859900",
         code_bracket: "#586e75",
         code_caret: "#d30102",
         code_off_tab: "#004052",

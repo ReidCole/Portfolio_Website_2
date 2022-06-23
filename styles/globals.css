@@ -3,6 +3,5 @@
 @tailwind utilities;
 
 html {
-  font-family: Arial, sans-serif;
   -webkit-tap-highlight-color: transparent;
 }

@@ -11,14 +11,14 @@ import logo_mongodb from "../../public/img/logos/mongodb_logo.svg";
 import logo_css from "../../public/img/logos/css_logo.svg";
 
 import ContentContainer from "../ContentContainer";
-import ProjectItem from "../ProjectItem";
+import ProjectItem from "./ProjectItem";
 import SectionHeading from "../SectionHeading";
 
 const ProjectsSection = () => {
   return (
     <ContentContainer>
       <section className="mx-4 mt-10 mb-10">
-        <SectionHeading>Recent Projects</SectionHeading>
+        <SectionHeading className="mb-10">Recent Projects</SectionHeading>
 
         <div className="flex flex-col gap-6">
           <ProjectItem

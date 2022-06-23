@@ -3,7 +3,7 @@
 import Image, { StaticImageData } from "next/image";
 import { useEffect, useState } from "react";
 import { useColorMode } from "theme-ui";
-import ScrollViewContainer from "./ScrollViewContainer";
+import ScrollViewContainer from "../ScrollViewContainer";
 
 type Props = {
   name: string;
@@ -45,8 +45,8 @@ const ProjectItem: React.FC<Props> = ({ name, imageSrc, href, description, packa
           className="p-3 shadow-lg group border-2"
         >
           <h3 className="text-xl mb-1">{name}</h3>
-          <div className="flex flex-col text-lg">
-            <div className="flex flex-shrink-0 mb-2">
+          <div className="flex flex-col lg:flex-row lg:gap-4 text-lg">
+            <div className="flex flex-shrink-0 mb-2 lg:mb-0 lg:w-1/2">
               <Image
                 src={imageSrc}
                 alt="simple notes website"
@@ -55,27 +55,29 @@ const ProjectItem: React.FC<Props> = ({ name, imageSrc, href, description, packa
                   (themeType === "dark" ? "brightness-75" : "brightness-100")
                 }
                 priority
-                width={1920}
-                height={1080}
+                width={1280}
+                height={720}
               />
             </div>
 
-            <p className="mb-2">Made with:</p>
-            <div className="flex flex-col gap-3">
-              {packages.map((p, index) => (
-                <div key={index} className="flex flex-row items-center gap-2">
-                  <Image
-                    src={p.logoSrc}
-                    alt={p.name + " logo"}
-                    width={40}
-                    height={40}
-                    className={
-                      p.invertOnLightTheme === true && themeType === "light" ? "invert" : ""
-                    }
-                  />
-                  <p>{p.name}</p>
-                </div>
-              ))}
+            <div className="h-full" sx={{ fontFamily: "body" }}>
+              <p className="mb-2">Made with:</p>
+              <div className="flex flex-col gap-3">
+                {packages.map((p, index) => (
+                  <div key={index} className="flex flex-row items-center gap-2">
+                    <Image
+                      src={p.logoSrc}
+                      alt={p.name + " logo"}
+                      width={40}
+                      height={40}
+                      className={
+                        p.invertOnLightTheme === true && themeType === "light" ? "invert" : ""
+                      }
+                    />
+                    <p>{p.name}</p>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>

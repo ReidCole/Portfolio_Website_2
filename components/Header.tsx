@@ -25,6 +25,7 @@ const Header = () => {
       <header
         sx={{
           backgroundColor: "background2",
+          fontFamily: "body",
         }}
         className="fixed w-full top-0 left-0 z-10 shadow-lg h-20"
       >
