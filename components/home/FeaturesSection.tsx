@@ -1,4 +1,6 @@
 /** @jsxImportSource theme-ui */
+import img_auth from "../../public/img/experience/experience_auth.webp";
+import img_responsive from "../../public/img/experience/experience_responsive.webp";
 
 import ContentContainer from "../ContentContainer";
 import SectionHeading from "../SectionHeading";
@@ -11,25 +13,26 @@ const FeaturesSection = () => {
       className="py-10 px-4 border-b-2"
     >
       <ContentContainer>
-        <SectionHeading>Feature Showcase</SectionHeading>
+        <SectionHeading>My Experience</SectionHeading>
         <p sx={{ color: "subtext" }} className="text-center mb-20 italic">
-          Features I have implemented into my projects
+          Techniques, features, or skills I&apos;ve used in my projects
         </p>
 
         <div className="flex flex-col gap-40">
           <FeatureItem
             imageSide="right"
+            imageSrc={img_auth}
             heading="Authentication"
             points={[
-              "Password resetting",
+              "Resetting your password",
               "Email verification",
               "Email and password validation",
-              "Multi-factor authentication",
-              "OAuth providers (Google, Facebook, Microsoft, etc.)",
+              "API authorization",
             ]}
           />
           <FeatureItem
             imageSide="left"
+            imageSrc={img_responsive}
             heading="Responsive Design"
             points={[
               "Desktop friendly",
@@ -37,6 +40,36 @@ const FeaturesSection = () => {
               "Auto-resizing text",
               "Navigation swaps between header and sidebar",
             ]}
+          />
+          <FeatureItem
+            imageSide="right"
+            heading="Testing"
+            points={["Unit tests", "Integration tests", "Cypress", "React Testing Library"]}
+          />
+          <FeatureItem
+            imageSide="left"
+            heading="Databases"
+            points={[
+              "Storing account data",
+              "Storing user-generated content",
+              "MongoDB",
+              "Firebase Firestore",
+            ]}
+          />
+          <FeatureItem
+            imageSide="right"
+            heading="Accessibility"
+            points={[
+              "Color contrast",
+              "Focus states",
+              "Proper semantic tags and labels",
+              "Intuitive tab order",
+            ]}
+          />
+          <FeatureItem
+            imageSide="left"
+            heading="Styling"
+            points={["Hover states", "Light and dark themes", "CSS", "Tailwind CSS"]}
           />
         </div>
       </ContentContainer>

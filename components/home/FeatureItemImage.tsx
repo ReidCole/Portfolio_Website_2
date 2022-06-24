@@ -19,8 +19,8 @@ const FeatureItemImage: React.FC<Props> = ({ src, altTextName, className }) => {
         placeholder="blur"
         blurDataURL={unloadedImg.src}
         src={src}
-        width={900}
-        height={600}
+        width={1920}
+        height={1080}
         alt={`${altTextName} example`}
       />
     </div>
