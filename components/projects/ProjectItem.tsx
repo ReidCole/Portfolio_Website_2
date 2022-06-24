@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { useColorMode } from "theme-ui";
 import useThemeType from "../../hooks/useThemeType";
 import ScrollViewContainer from "../ScrollViewContainer";
+import unloadedImg from "../../public/img/unloaded.jpg";
 
 type Props = {
   name: string;
@@ -45,6 +46,8 @@ const ProjectItem: React.FC<Props> = ({ name, imageSrc, href, packages }) => {
                   "group-hover:brightness-100 " +
                   (themeType === "dark" ? "brightness-75" : "brightness-100")
                 }
+                placeholder="blur"
+                blurDataURL={unloadedImg.src}
                 priority
                 width={1280}
                 height={720}

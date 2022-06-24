@@ -85,7 +85,7 @@ const ProjectsSection = () => {
           <ProjectItem
             name="Old Portfolio Site"
             imageSrc={thumbnail_old}
-            href="https://old.reidcole.me"
+            href="https://oldreidcole.netlify.app"
             packages={[
               {
                 name: "Next JS",
