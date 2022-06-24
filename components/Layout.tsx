@@ -9,7 +9,14 @@ const Layout: React.FC<Props> = ({ children }) => {
   return (
     <>
       <Header />
-      <main sx={{ fontFamily: "body" }}>{children}</main>
+      <main
+        sx={{
+          fontFamily: "body",
+          "*": { "::selection": { backgroundColor: "code_selection" } },
+        }}
+      >
+        {children}
+      </main>
     </>
   );
 };

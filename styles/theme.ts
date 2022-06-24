@@ -20,6 +20,7 @@ export const theme: Theme = {
     code_button_hover: "#363737",
     code_dropdown_bg: "#303031",
     code_dropdown_hover: "#094771",
+    code_selection: "#264f78",
     modes: {
       light: {
         background: "#ffffff",
@@ -33,6 +34,7 @@ export const theme: Theme = {
         code_button_hover: "#e1e1e1",
         code_dropdown_bg: "#ffffff",
         code_dropdown_hover: "#0060c0",
+        code_selection: "#add6ff",
       },
       solarizedDark: {
         background: "#002b36",
@@ -46,6 +48,7 @@ export const theme: Theme = {
         code_button_hover: "#1c4956",
         code_dropdown_bg: "#00212b",
         code_dropdown_hover: "#005a6f",
+        code_selection: "#274642",
       },
       draculaDark: {
         background: "#282a36",
@@ -59,6 +62,7 @@ export const theme: Theme = {
         code_button_hover: "#2d2f34",
         code_dropdown_bg: "#343746",
         code_dropdown_hover: "#44475a",
+        code_selection: "#44475a",
       },
     },
   },
