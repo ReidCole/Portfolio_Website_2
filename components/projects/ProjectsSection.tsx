@@ -17,8 +17,8 @@ import SectionHeading from "../SectionHeading";
 
 const ProjectsSection = () => {
   return (
-    <ContentContainer>
-      <section className="mx-4 mt-10 mb-10">
+    <section className="px-4 mt-10 mb-10">
+      <ContentContainer>
         <SectionHeading className="mb-10">Recent Projects</SectionHeading>
 
         <div className="flex flex-col gap-6">
@@ -103,8 +103,8 @@ const ProjectsSection = () => {
             ]}
           />
         </div>
-      </section>
-    </ContentContainer>
+      </ContentContainer>
+    </section>
   );
 };
 

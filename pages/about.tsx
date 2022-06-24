@@ -1,5 +1,6 @@
 import { NextPage } from "next";
 import Head from "next/head";
+import SkillsSection from "../components/about/SkillsSection";
 import StorySection from "../components/about/StorySection";
 
 const About: NextPage = () => {
@@ -10,6 +11,8 @@ const About: NextPage = () => {
       </Head>
 
       <StorySection />
+
+      <SkillsSection />
     </div>
   );
 };

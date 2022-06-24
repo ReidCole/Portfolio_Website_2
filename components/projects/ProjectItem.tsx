@@ -3,6 +3,7 @@
 import Image, { StaticImageData } from "next/image";
 import { useEffect, useState } from "react";
 import { useColorMode } from "theme-ui";
+import useThemeType from "../../hooks/useThemeType";
 import ScrollViewContainer from "../ScrollViewContainer";
 
 type Props = {
@@ -19,16 +20,7 @@ type ShowcasePackage = {
 };
 
 const ProjectItem: React.FC<Props> = ({ name, imageSrc, href, packages }) => {
-  const [colorMode, setColorMode] = useColorMode();
-  const [themeType, setThemeType] = useState<"dark" | "light">("dark");
-
-  useEffect(() => {
-    if (colorMode.toLowerCase().includes("light")) {
-      setThemeType("light");
-    } else {
-      setThemeType("dark");
-    }
-  }, [colorMode]);
+  const themeType = useThemeType();
 
   return (
     <ScrollViewContainer>

@@ -13,7 +13,7 @@ const FeaturesSection = () => {
       <ContentContainer>
         <SectionHeading>Feature Showcase</SectionHeading>
         <p sx={{ color: "subtext" }} className="text-center mb-20 italic">
-          Features I implement into my projects
+          Features I have implemented into my projects
         </p>
 
         <div className="flex flex-col gap-40">
