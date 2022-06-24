@@ -1,5 +1,6 @@
 import { NextPage } from "next";
 import Head from "next/head";
+import StorySection from "../components/about/StorySection";
 
 const About: NextPage = () => {
   return (
@@ -7,6 +8,8 @@ const About: NextPage = () => {
       <Head>
         <title>Reid Cole - About Me</title>
       </Head>
+
+      <StorySection />
     </div>
   );
 };

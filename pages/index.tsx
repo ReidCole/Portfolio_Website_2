@@ -6,9 +6,9 @@ import ReactTyped from "react-typed";
 import ContentContainer from "../components/ContentContainer";
 import ProjectItem from "../components/projects/ProjectItem";
 import SectionHeading from "../components/SectionHeading";
-import FeatureItem from "../components/features/FeatureItem";
-import FeaturesSection from "../components/features/FeaturesSection";
-import HeroSection from "../components/hero/HeroSection";
+import FeatureItem from "../components/home/FeatureItem";
+import FeaturesSection from "../components/home/FeaturesSection";
+import HeroSection from "../components/home/HeroSection";
 
 const Home: NextPage = () => {
   return (
