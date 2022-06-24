@@ -1,5 +1,1 @@
-- organize large components by making parts of them into their own components
-- make content container wider at larger screen sizes so you can put wider stuff in them
-  - make features in showcase nice and wide on wider screen sizes
-- rewrite story section. use interview notes for reference
-- add more features to feature showcase, then record videos of them in action (or have scrolling images that show them (like that slick js))
+done for now

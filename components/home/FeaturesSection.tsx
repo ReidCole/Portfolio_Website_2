@@ -21,7 +21,7 @@ const FeaturesSection = () => {
         <div className="flex flex-col gap-40">
           <FeatureItem
             imageSide="right"
-            imageSrc={img_auth}
+            iconClassName="person-check"
             heading="Authentication"
             points={[
               "Resetting your password",
@@ -32,7 +32,7 @@ const FeaturesSection = () => {
           />
           <FeatureItem
             imageSide="left"
-            imageSrc={img_responsive}
+            iconClassName="phone"
             heading="Responsive Design"
             points={[
               "Desktop friendly",
@@ -43,12 +43,14 @@ const FeaturesSection = () => {
           />
           <FeatureItem
             imageSide="right"
+            iconClassName="list-check"
             heading="Testing"
             points={["Unit tests", "Integration tests", "Cypress", "React Testing Library"]}
           />
           <FeatureItem
             imageSide="left"
             heading="Databases"
+            iconClassName="file-spreadsheet"
             points={[
               "Storing account data",
               "Storing user-generated content",
@@ -59,6 +61,7 @@ const FeaturesSection = () => {
           <FeatureItem
             imageSide="right"
             heading="Accessibility"
+            iconClassName="zoom-in"
             points={[
               "Color contrast",
               "Focus states",
@@ -67,6 +70,7 @@ const FeaturesSection = () => {
             ]}
           />
           <FeatureItem
+            iconClassName="brush"
             imageSide="left"
             heading="Styling"
             points={["Hover states", "Light and dark themes", "CSS", "Tailwind CSS"]}
