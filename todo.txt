@@ -1,1 +1,3 @@
 done for now
+
+- could add a button to the bottom of features section that links to projects page

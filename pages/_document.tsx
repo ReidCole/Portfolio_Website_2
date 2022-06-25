@@ -4,7 +4,12 @@ import { InitializeColorMode } from "theme-ui";
 export default function Document() {
   return (
     <Html lang="en-US">
-      <Head />
+      <Head>
+        <meta
+          name="description"
+          content="Reid Cole's portfolio page, showcasing projects and skills."
+        />
+      </Head>
       <body>
         <InitializeColorMode />
         <Main />

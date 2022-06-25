@@ -34,7 +34,7 @@ const ProjectItem: React.FC<Props> = ({ name, imageSrc, href, packages }) => {
               borderColor: "code_element",
             },
           }}
-          className="p-3 shadow-lg group border-2"
+          className="p-3 shadow-lg group border-2 select-none"
         >
           <h3 className="text-xl mb-1">{name}</h3>
           <div className="flex flex-col lg:flex-row lg:gap-4 text-lg">

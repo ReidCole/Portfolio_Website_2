@@ -16,7 +16,7 @@ const SkillItem: React.FC<Props> = ({ logoSrc, children, invertOnLightTheme = fa
     <ScrollViewContainer>
       <li
         sx={{ backgroundColor: "background2", borderColor: "code_button_hover" }}
-        className="flex flex-row items-center gap-2 text-lg p-2 border-2 shadow-md"
+        className="flex flex-row items-center gap-2 text-lg p-2 border-2 shadow-md select-none"
       >
         <Image
           src={logoSrc}

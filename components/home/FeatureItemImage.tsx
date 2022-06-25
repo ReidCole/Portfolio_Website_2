@@ -11,8 +11,8 @@ type Props = {
 const FeatureItemImage: React.FC<Props> = ({ iconClassName, className = "" }) => {
   return (
     <div
-      sx={{ fontSize: "10rem", borderColor: "code_button_hover" }}
-      className={"flex flex-shrink-0 h-52 items-center justify-center border-2 " + className}
+      sx={{ fontSize: "150px", backgroundColor: "background" }}
+      className={"flex flex-shrink-0 h-60 items-center justify-center " + className}
     >
       <i className={"flex bi-" + iconClassName} />
     </div>

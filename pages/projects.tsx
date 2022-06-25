@@ -6,7 +6,7 @@ const Projects: NextPage = () => {
   return (
     <div>
       <Head>
-        <title>Reid Cole - About Me</title>
+        <title>Reid Cole - My Projects</title>
       </Head>
 
       <ProjectsSection />
