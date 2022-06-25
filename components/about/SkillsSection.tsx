@@ -15,7 +15,7 @@ import SkillItem from "./SkillItem";
 
 const SkillsSection = () => {
   return (
-    <section className="px-4">
+    <section className="px-4 mb-20">
       <ContentContainer>
         <SectionHeading className="mb-4">Skills</SectionHeading>
 
@@ -30,6 +30,14 @@ const SkillsSection = () => {
           <SkillItem logoSrc={logo_tailwind}>Tailwind CSS</SkillItem>
           <SkillItem logoSrc={logo_cypress}>Cypress</SkillItem>
         </ul>
+
+        <ScrollViewContainer>
+          <p className="text-center">
+            Need a developer but don&apos;t see the skills you&apos;re looking for here? <br />I can
+            learn new things quickly, so don&apos;t be afraid to reach out if you&apos;re working
+            with other technologies. 🙂
+          </p>
+        </ScrollViewContainer>
       </ContentContainer>
     </section>
   );
