@@ -18,8 +18,9 @@ module.exports = {
           "50%, 100%": { opacity: "0%" },
         },
       },
-      screens: {
-        "hover-hover": { raw: "(hover: hover)" },
+      fontSize: {
+        "icon-lg": "150px",
+        "icon-sm": "120px",
       },
     },
   },

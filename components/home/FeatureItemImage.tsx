@@ -11,8 +11,11 @@ type Props = {
 const FeatureItemImage: React.FC<Props> = ({ iconClassName, className = "" }) => {
   return (
     <div
-      sx={{ fontSize: "150px", backgroundColor: "background" }}
-      className={"flex flex-shrink-0 h-60 items-center justify-center " + className}
+      sx={{ backgroundColor: "background" }}
+      className={
+        "flex flex-shrink-0 h-48 xs:h-60 items-center justify-center text-icon-sm xs:text-icon-lg " +
+        className
+      }
     >
       <i className={"flex bi-" + iconClassName} />
     </div>
