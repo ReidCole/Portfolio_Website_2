@@ -1,23 +1,31 @@
-import thumbnail_sn from "../../public/img/simplenotes.jpg";
-import thumbnail_mlm from "../../public/img/movielistmaker.jpg";
-import thumbnail_rd from "../../public/img/reidsdrinks.jpg";
-import thumbnail_old from "../../public/img/oldportfolio.jpg";
-import logo_next from "../../public/img/logos/nextjs_logo.svg";
-import logo_redux from "../../public/img/logos/redux_logo.svg";
-import logo_tailwind from "../../public/img/logos/tailwindcss_logo.svg";
-import logo_ts from "../../public/img/logos/ts_logo.svg";
-import logo_cypress from "../../public/img/logos/cypress_logo.svg";
-import logo_express from "../../public/img/logos/express_logo.png";
-import logo_mongodb from "../../public/img/logos/mongodb_logo.svg";
-import logo_css from "../../public/img/logos/css_logo.svg";
+/** @jsxImportSource theme-ui */
 
-import ContentContainer from "../ContentContainer";
+import thumbnail_sn from "../public/img/simplenotes.jpg";
+import thumbnail_mlm from "../public/img/movielistmaker.jpg";
+import thumbnail_rd from "../public/img/reidsdrinks.jpg";
+import thumbnail_old from "../public/img/oldportfolio.jpg";
+import logo_next from "../public/img/logos/nextjs_logo.svg";
+import logo_redux from "../public/img/logos/redux_logo.svg";
+import logo_tailwind from "../public/img/logos/tailwindcss_logo.svg";
+import logo_ts from "../public/img/logos/ts_logo.svg";
+import logo_cypress from "../public/img/logos/cypress_logo.svg";
+import logo_express from "../public/img/logos/express_logo.png";
+import logo_mongodb from "../public/img/logos/mongodb_logo.svg";
+import logo_css from "../public/img/logos/css_logo.svg";
+
+import ContentContainer from "./ContentContainer";
 import ProjectItem from "./ProjectItem";
-import SectionHeading from "../SectionHeading";
+import SectionHeading from "./SectionHeading";
 
 const ProjectsSection = () => {
   return (
-    <section className="px-4 mt-10 mb-10">
+    <section
+      className="px-4 py-10 mb-10 border-b-2"
+      sx={{
+        backgroundColor: "background2",
+        borderColor: "code_button_hover",
+      }}
+    >
       <ContentContainer>
         <SectionHeading className="mb-10">Recent Projects</SectionHeading>
 

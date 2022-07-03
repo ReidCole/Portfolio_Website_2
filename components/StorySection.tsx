@@ -1,7 +1,7 @@
 /** @jsxImportSource theme-ui */
-import ContentContainer from "../ContentContainer";
-import ScrollViewContainer from "../ScrollViewContainer";
-import SectionHeading from "../SectionHeading";
+import ContentContainer from "./ContentContainer";
+import ScrollViewContainer from "./ScrollViewContainer";
+import SectionHeading from "./SectionHeading";
 
 const StorySection = () => {
   return (

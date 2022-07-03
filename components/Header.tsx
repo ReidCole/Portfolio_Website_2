@@ -43,9 +43,6 @@ const Header = () => {
             <NavLink href="/about" iconClass="person">
               About
             </NavLink>
-            <NavLink href="/projects" iconClass="view-list">
-              Projects
-            </NavLink>
           </nav>
           <div className="flex flex-row h-full items-center px-2 gap-2">
             <HeaderButton
@@ -92,9 +89,6 @@ const Header = () => {
             </SidebarLink>
             <SidebarLink href="/about" iconClass="person">
               About
-            </SidebarLink>
-            <SidebarLink href="/projects" iconClass="view-list">
-              Projects
             </SidebarLink>
           </Sidebar>
         </div>

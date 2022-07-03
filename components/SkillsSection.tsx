@@ -1,16 +1,16 @@
-import logo_tailwind from "../../public/img/logos/tailwindcss_logo.svg";
-import logo_ts from "../../public/img/logos/ts_logo.svg";
-import logo_js from "../../public/img/logos/js_logo.svg";
-import logo_cypress from "../../public/img/logos/cypress_logo.svg";
-import logo_express from "../../public/img/logos/express_logo.png";
-import logo_css from "../../public/img/logos/css_logo.svg";
-import logo_react from "../../public/img/logos/react_logo.svg";
-import logo_html from "../../public/img/logos/html_logo.svg";
-import logo_git from "../../public/img/logos/git_logo.svg";
+import logo_tailwind from "../public/img/logos/tailwindcss_logo.svg";
+import logo_ts from "../public/img/logos/ts_logo.svg";
+import logo_js from "../public/img/logos/js_logo.svg";
+import logo_cypress from "../public/img/logos/cypress_logo.svg";
+import logo_express from "../public/img/logos/express_logo.png";
+import logo_css from "../public/img/logos/css_logo.svg";
+import logo_react from "../public/img/logos/react_logo.svg";
+import logo_html from "../public/img/logos/html_logo.svg";
+import logo_git from "../public/img/logos/git_logo.svg";
 
-import ContentContainer from "../ContentContainer";
-import ScrollViewContainer from "../ScrollViewContainer";
-import SectionHeading from "../SectionHeading";
+import ContentContainer from "./ContentContainer";
+import ScrollViewContainer from "./ScrollViewContainer";
+import SectionHeading from "./SectionHeading";
 import SkillItem from "./SkillItem";
 
 const SkillsSection = () => {

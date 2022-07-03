@@ -1,7 +1,7 @@
 /** @jsxImportSource theme-ui */
 import Image, { StaticImageData } from "next/image";
-import useThemeType from "../../hooks/useThemeType";
-import ScrollViewContainer from "../ScrollViewContainer";
+import useThemeType from "../hooks/useThemeType";
+import ScrollViewContainer from "./ScrollViewContainer";
 
 type Props = {
   logoSrc: string | StaticImageData;

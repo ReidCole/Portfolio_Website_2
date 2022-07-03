@@ -3,9 +3,9 @@
 import Image, { StaticImageData } from "next/image";
 import { useEffect, useState } from "react";
 import { useColorMode } from "theme-ui";
-import useThemeType from "../../hooks/useThemeType";
-import ScrollViewContainer from "../ScrollViewContainer";
-import unloadedImg from "../../public/img/unloaded.jpg";
+import useThemeType from "../hooks/useThemeType";
+import ScrollViewContainer from "./ScrollViewContainer";
+import unloadedImg from "../public/img/unloaded.jpg";
 
 type Props = {
   name: string;
@@ -28,7 +28,7 @@ const ProjectItem: React.FC<Props> = ({ name, imageSrc, href, packages }) => {
       <a href={href} rel="noopener noreferrer" target="_blank" title={`Visit ${name}`}>
         <div
           sx={{
-            backgroundColor: "background2",
+            backgroundColor: "background",
             borderColor: "code_button_hover",
             ":hover": {
               borderColor: "code_element",
@@ -38,7 +38,7 @@ const ProjectItem: React.FC<Props> = ({ name, imageSrc, href, packages }) => {
         >
           <h3 className="text-xl mb-1">{name}</h3>
           <div className="flex flex-col lg:flex-row lg:gap-4 text-lg">
-            <div className="flex flex-shrink-0 mb-2 lg:mb-0 lg:w-1/2">
+            <div className="flex flex-shrink-0 mb-2 lg:mb-0 lg:w-1/2 bg-black shadow-md">
               <Image
                 src={imageSrc}
                 alt="simple notes website"
@@ -46,8 +46,6 @@ const ProjectItem: React.FC<Props> = ({ name, imageSrc, href, packages }) => {
                   "group-hover:brightness-100 " +
                   (themeType === "dark" ? "brightness-75" : "brightness-100")
                 }
-                placeholder="blur"
-                blurDataURL={unloadedImg.src}
                 priority
                 width={1280}
                 height={720}

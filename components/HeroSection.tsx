@@ -1,7 +1,7 @@
 /** @jsxImportSource theme-ui */
 
 import ReactTyped from "react-typed";
-import ScrollViewContainer from "../ScrollViewContainer";
+import ScrollViewContainer from "./ScrollViewContainer";
 
 const HeroSection = () => {
   return (
